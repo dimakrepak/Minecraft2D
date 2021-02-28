@@ -1,0 +1,182 @@
+:root {
+  --fontstyle: "Minecraft";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fontstyle);
+}
+.main {
+  width: 100vw;
+  display: flex;
+  display: none;
+}
+
+/* ------------------------------------------------------------------WORLD--------------------------------------------------------- */
+.matrix {
+  width: 70vw;
+  height: 100vh;
+  /* border: 1px black solid; */
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
+.element:hover {
+  border: 1px black solid;
+}
+.ground {
+  background: url(img/ground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grass {
+  background: url(img/grass.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.leaves {
+  background: url(img/leaves.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wood {
+  background: url(img/tree.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.diamond {
+  background: url(img/diamond.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sky {
+  background: skyblue;
+}
+
+/* ---------------------------------------------------------------------MENU--------------------------------------------------- */
+
+.menu {
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(214, 214, 214);
+}
+
+.tools {
+  width: 40vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inventory > div {
+  width: 8vh;
+  height: 8vh;
+  background-size: contain;
+  background-color: rgb(165, 165, 165);
+  border: 4px solid transparent;
+}
+.tools > div:hover,
+.inventory > div:hover {
+  border: 4px solid black;
+}
+#active {
+  background-color: rgb(16, 206, 16);
+  border: 4px black solid;
+}
+#wrongTile {
+  background-color: red;
+}
+.menu > h2 {
+  text-align: center;
+}
+.inventory {
+  display: flex;
+  justify-content: space-around;
+  width: 40vh;
+}
+.btn {
+  display: block;
+  width: 15vh;
+  height: 10vh;
+  font-family: "Minecraft";
+  font-size: 1.5rem;
+  border: 4px solid black;
+}
+.btn:hover {
+  background-color: rgb(224, 32, 32);
+}
+.pickaxe {
+  background: url(img/Diamond_Pickaxe_JE3_BE3.png);
+  width: 10vh;
+  height: 10vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgb(165, 165, 165);
+  border: 4px solid transparent;
+}
+.axe {
+  background: url(img/Diamond_Axe_JE2_BE2.png);
+  width: 10vh;
+  height: 10vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 4px solid transparent;
+  background-color: rgb(165, 165, 165);
+  border: 4px solid transparent;
+}
+.shovel {
+  background: url(img/Golden_Shovel_JE3_BE2.png);
+  width: 10vh;
+  height: 10vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 4px solid transparent;
+  background-color: rgb(165, 165, 165);
+  border: 4px solid transparent;
+}
+.leavesInv {
+  background: url(img/leaves.png);
+  font-size: 30px;
+  color: white;
+}
+.woodInv {
+  background: url(img/tree.jpg);
+  font-size: 30px;
+  color: white;
+}
+.groundInv {
+  background: url(img/ground.jpg);
+  font-size: 30px;
+  color: white;
+}
+.diamondInv {
+  background: url(img/diamond.jpg);
+  font-size: 30px;
+  color: white;
+}
+/* -----------------------------------------------------------------Media Quaries------------------------------------------------------ */
+
+@media (max-width: 650px) {
+  .main {
+    flex-flow: column;
+  }
+  .matrix {
+    width: 100vw;
+    height: 50vh;
+  }
+  .main {
+    grid-template-columns: repeat(18, 1vh);
+  grid-template-rows: repeat(16, 1vh);
+  }
+  .menu{
+    width: 100vw;
+    height:50vh ;
+  }
+}

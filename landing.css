@@ -1,0 +1,75 @@
+#landing-page {
+  width: 100vw;
+  height: 100vh;
+  background: url(img/wp2005921-game-logo-wallpapers.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  color: rgb(82, 219, 80);
+}
+
+p {
+  margin-top: 10px;
+  color: white;
+}
+.welcome-landing {
+  display: flex;
+  flex-flow: column;
+}
+.tools-landing {
+  display: flex;
+  width: 40vw;
+  height: 15vh;
+  justify-content: space-between;
+}
+.tools-landing > div {
+  margin-top: 40px;
+  width: 100px;
+  height: 100px;
+  border: 1px rgb(82, 219, 80) solid;
+}
+.start-btn {
+  width: 20%;
+  height: 20%;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  font-size: 3rem;
+  font-family: var(--fontstyle);
+  background-color: rgb(82, 219, 80);
+}
+.start-btn:hover {
+  background-color: rgb(47, 129, 45);
+  color: white;
+}
+.shovel-landing {
+  background: url(img/Golden_Shovel_JE3_BE2.png) no-repeat;
+  background-size: contain;
+}
+.axe-landing {
+  background: url(img/Diamond_Axe_JE2_BE2.png) no-repeat;
+  background-size: contain;
+}
+.pickaxe-landing {
+  background: url(img/Diamond_Pickaxe_JE3_BE3.png) no-repeat;
+  background-size: contain;
+}
+.tools-landing > div:hover {
+  background-color: rgb(82, 219, 80);
+}
+
+@media (max-width: 650px) {
+    #landing-page{
+        
+        background-position: center;
+    }
+  .tools-landing {
+      width: 100%;
+      height: 100%;
+  }
+  .start-btn{
+      width: 200px;
+  }
+}
